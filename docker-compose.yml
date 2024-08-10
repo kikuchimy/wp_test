@@ -28,6 +28,16 @@ services:
     volumes:
       - ./db/mysql:/var/lib/mysql
 
+  mailpit:
+    image: 'axllent/mailpit:latest'
+    ports:
+        - '${FORWARD_MAILPIT_PORT:-1025}:1025'
+        - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025'
+    environment:
+      MP_DATA_FILE: /tmp/mailpit.db
+    volumes:
+      - ./mailpit-data:/tmp
+
 # volumes:
 #   wordpress:
 #   db:
