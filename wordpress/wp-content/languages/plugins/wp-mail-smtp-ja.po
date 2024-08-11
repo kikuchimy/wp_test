@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-08-03 10:03:27+0000\n"
+"PO-Revision-Date: 2024-08-10 15:06:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,6 +45,10 @@ msgstr "削除"
 #: src/Admin/Pages/AlertsTab.php:199
 msgid "Microsoft Teams Alerts"
 msgstr "Microsoft Teams アラート"
+
+#: src/Admin/Pages/AlertsTab.php:194
+msgid "Paste in the Microsoft Teams webhook URL you’d like to use to receive alerts when email sending fails. Read our documentation on setting up Microsoft Teams alerts."
+msgstr "メール送信失敗時のアラート受信に使用する Microsoft Teams の Webhook URL を貼り付けます。Microsoft Teams アラートの設定については、こちらのドキュメントをご覧ください。"
 
 #: src/Admin/Pages/AlertsTab.php:193
 msgid "Microsoft Teams"
@@ -89,6 +93,11 @@ msgstr "[メールキュー] キューからのメール送信をスキップし
 msgid "[Emails Queue] Skipped enqueueing email. %1$s."
 msgstr "[メールキュー] メールのエンキューをスキップしました。%1$s。"
 
+#. translators: %1$s - Database error message.
+#: src/Queue/Email.php:600
+msgid "Insert/update SQL query error: %1$s"
+msgstr "SQL クエリの挿入 / 更新エラー: %1$s"
+
 #. translators: %1$s - JSON error message.
 #: src/Queue/Email.php:545
 msgid "Data JSON encoding error: %1$s"
@@ -103,6 +112,14 @@ msgstr "データ JSON デコード エラー: %1$s"
 msgid "Invalid record format"
 msgstr "無効なレコード形式"
 
+#: src/Queue/Email.php:150
+msgid "Record not found in DB"
+msgstr "DB にレコードが見つかりません"
+
+#: src/MailCatcherTrait.php:310
+msgid "The selected mailer is not compatible with your PHP version."
+msgstr "選択されたメーラは、お使いの PHP バージョンと互換性がありません。"
+
 #: src/MailCatcherTrait.php:306
 msgid "The selected mailer not found."
 msgstr "選択したメーラーが見つかりません。"
@@ -110,6 +127,10 @@ msgstr "選択したメーラーが見つかりません。"
 #: src/Admin/Review.php:164
 msgid "Yes, I'll rate it with 5-stars"
 msgstr "はい、5つ星で評価します。"
+
+#: src/Admin/Review.php:161
+msgid "That's fantastic! Would you consider giving it a 5-star rating on WordPress.org? It will help other users with email issues and it will mean the world to us!"
+msgstr "素晴らしいですね ! WordPress.org で5つ星の評価をお願いできますか ? そうしていただけると、メールの問題で困っている他のユーザーの助けになりますし、私たちにとっても大きな意味があります !"
 
 #: src/Admin/Review.php:151
 msgid "Provide Feedback"
@@ -137,6 +158,16 @@ msgstr "メールを非同期で送信すると、メールのリクエストが
 msgid "Optimize Email Sending"
 msgstr "メール送信の最適化"
 
+#. translators: %1$s - create missing tables link; %2$s - contact support link.
+#: src/Admin/Pages/DebugEventsTab.php:518
+msgid "WP Mail SMTP is using custom database tables for some of its features. In order to work properly, the custom tables should be created, and it seems they are missing. Please try to <a href=\"%1$s\">create the missing DB tables by clicking on this link</a>. If this issue persists, please <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">contact our support</a>."
+msgstr "WP Mail SMTP は、一部の機能にカスタムデータベーステーブルを使用しています。正しく動作させるため、カスタムテーブルを用意する必要がありますが、それがないようです。<a href=\"%1$s\">このリンクをクリックして、不足している DB テーブルを作成してください</a>。問題が解決しない場合は、<a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">サポートにお問い合わせください</a>。"
+
+#. translators: %1$s - create missing tables link; %2$s - contact support link.
+#: src/Admin/Pages/DebugEventsTab.php:501
+msgid "WP Mail SMTP is using custom database tables for some of its features. In order to work properly, the custom tables should be created, and it seems they are missing. Please try to <a href=\"%1$s\">create the missing DB tables by clicking on this link</a>. If this issue persists, please <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">contact our support</a> and provide the error message below:"
+msgstr "WP Mail SMTP は、一部の機能にカスタムデータベーステーブルを使用しています。正しく動作させるために、カスタムテーブルを用意する必要がありますが、それがないようです。<a href=\"%1$s\">このリンクをクリックして、不足している DB テーブルを作成してください</a>。この問題が解決しない場合は、<a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">サポートに連絡</a>し、次のエラーメッセージを提供してください:"
+
 #: src/Admin/Area.php:562
 msgid "We're sorry, Email Rate Limiting is not available on your plan. Please upgrade to the Pro plan to unlock all these awesome features."
 msgstr "申し訳ございませんが、お客様のプランではメール速度制限はご利用いただけません。これらの素晴らしい機能のロックを解除するには、プロプランにアップグレードしてください。"
@@ -144,6 +175,10 @@ msgstr "申し訳ございませんが、お客様のプランではメール速
 #: src/Admin/Area.php:561
 msgid "Email Rate Limiting <br> is a Pro Feature"
 msgstr "メールレート制限<br>はプロの機能です。"
+
+#: assets/languages/wp-mail-smtp-vue.php:995
+msgid "Install the WPForms plugin and create beautiful contact forms with just a few clicks."
+msgstr "WPForms プラグインをインストールし、わずか数クリックで美しいコンタクトフォームを作成できます。"
 
 #. translators: %s - URL to our Gmail doc.
 #: src/Providers/Gmail/Options.php:41
